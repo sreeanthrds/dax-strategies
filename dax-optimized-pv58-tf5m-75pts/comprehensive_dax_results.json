@@ -1,0 +1,297 @@
+{
+  "total_combinations_tested": 8100,
+  "successful_tests": 8100,
+  "execution_time_seconds": 3701.311697,
+  "top_10_results": [
+    {
+      "rank": 1,
+      "parameters": {
+        "pivot_left": 5,
+        "pivot_right": 8,
+        "timeframe_minutes": 5,
+        "target_points": 75,
+        "base_stop": 36.0,
+        "stop_mode": "zone",
+        "accumulated_loss_mode": "none",
+        "reset_on_target": true,
+        "target_increase_on_hit": 30.0,
+        "max_accumulated_loss_cap": 150,
+        "force_exit_time": "16:55",
+        "dual_position": false
+      },
+      "performance": {
+        "score": 6014.95,
+        "total_pnl": 19825.35,
+        "total_trades": 1663,
+        "win_rate": 47.6,
+        "sharpe_ratio": 0.224,
+        "max_drawdown": 463.95,
+        "profit_factor": 1.73,
+        "target_hits": 529,
+        "stop_hits": 802,
+        "force_exits": 332
+      }
+    },
+    {
+      "rank": 2,
+      "parameters": {
+        "pivot_left": 5,
+        "pivot_right": 8,
+        "timeframe_minutes": 5,
+        "target_points": 75,
+        "base_stop": 36.0,
+        "stop_mode": "zone",
+        "accumulated_loss_mode": "fixed",
+        "reset_on_target": true,
+        "target_increase_on_hit": 30.0,
+        "max_accumulated_loss_cap": 150,
+        "force_exit_time": "16:55",
+        "dual_position": false
+      },
+      "performance": {
+        "score": 6014.95,
+        "total_pnl": 19825.35,
+        "total_trades": 1663,
+        "win_rate": 47.6,
+        "sharpe_ratio": 0.224,
+        "max_drawdown": 463.95,
+        "profit_factor": 1.73,
+        "target_hits": 529,
+        "stop_hits": 802,
+        "force_exits": 332
+      }
+    },
+    {
+      "rank": 3,
+      "parameters": {
+        "pivot_left": 5,
+        "pivot_right": 8,
+        "timeframe_minutes": 5,
+        "target_points": 75,
+        "base_stop": 36.0,
+        "stop_mode": "both",
+        "accumulated_loss_mode": "none",
+        "reset_on_target": true,
+        "target_increase_on_hit": 30.0,
+        "max_accumulated_loss_cap": 150,
+        "force_exit_time": "16:55",
+        "dual_position": false
+      },
+      "performance": {
+        "score": 5898.58,
+        "total_pnl": 19478.65,
+        "total_trades": 1820,
+        "win_rate": 44.0,
+        "sharpe_ratio": 0.221,
+        "max_drawdown": 512.4,
+        "profit_factor": 1.7,
+        "target_hits": 533,
+        "stop_hits": 967,
+        "force_exits": 320
+      }
+    },
+    {
+      "rank": 4,
+      "parameters": {
+        "pivot_left": 5,
+        "pivot_right": 8,
+        "timeframe_minutes": 5,
+        "target_points": 75,
+        "base_stop": 36.0,
+        "stop_mode": "both",
+        "accumulated_loss_mode": "fixed",
+        "reset_on_target": true,
+        "target_increase_on_hit": 30.0,
+        "max_accumulated_loss_cap": 150,
+        "force_exit_time": "16:55",
+        "dual_position": false
+      },
+      "performance": {
+        "score": 5898.58,
+        "total_pnl": 19478.65,
+        "total_trades": 1820,
+        "win_rate": 44.0,
+        "sharpe_ratio": 0.221,
+        "max_drawdown": 512.4,
+        "profit_factor": 1.7,
+        "target_hits": 533,
+        "stop_hits": 967,
+        "force_exits": 320
+      }
+    },
+    {
+      "rank": 5,
+      "parameters": {
+        "pivot_left": 3,
+        "pivot_right": 8,
+        "timeframe_minutes": 5,
+        "target_points": 75,
+        "base_stop": 36.0,
+        "stop_mode": "both",
+        "accumulated_loss_mode": "none",
+        "reset_on_target": true,
+        "target_increase_on_hit": 30.0,
+        "max_accumulated_loss_cap": 150,
+        "force_exit_time": "16:55",
+        "dual_position": false
+      },
+      "performance": {
+        "score": 5682.88,
+        "total_pnl": 18798.0,
+        "total_trades": 1924,
+        "win_rate": 42.6,
+        "sharpe_ratio": 0.202,
+        "max_drawdown": 590.2,
+        "profit_factor": 1.63,
+        "target_hits": 557,
+        "stop_hits": 1037,
+        "force_exits": 330
+      }
+    },
+    {
+      "rank": 6,
+      "parameters": {
+        "pivot_left": 3,
+        "pivot_right": 8,
+        "timeframe_minutes": 5,
+        "target_points": 75,
+        "base_stop": 36.0,
+        "stop_mode": "both",
+        "accumulated_loss_mode": "fixed",
+        "reset_on_target": true,
+        "target_increase_on_hit": 30.0,
+        "max_accumulated_loss_cap": 150,
+        "force_exit_time": "16:55",
+        "dual_position": false
+      },
+      "performance": {
+        "score": 5682.88,
+        "total_pnl": 18798.0,
+        "total_trades": 1924,
+        "win_rate": 42.6,
+        "sharpe_ratio": 0.202,
+        "max_drawdown": 590.2,
+        "profit_factor": 1.63,
+        "target_hits": 557,
+        "stop_hits": 1037,
+        "force_exits": 330
+      }
+    },
+    {
+      "rank": 7,
+      "parameters": {
+        "pivot_left": 3,
+        "pivot_right": 8,
+        "timeframe_minutes": 5,
+        "target_points": 100,
+        "base_stop": 48.0,
+        "stop_mode": "both",
+        "accumulated_loss_mode": "none",
+        "reset_on_target": true,
+        "target_increase_on_hit": 40.0,
+        "max_accumulated_loss_cap": 200,
+        "force_exit_time": "16:55",
+        "dual_position": false
+      },
+      "performance": {
+        "score": 5657.27,
+        "total_pnl": 18681.5,
+        "total_trades": 1616,
+        "win_rate": 41.6,
+        "sharpe_ratio": 0.202,
+        "max_drawdown": 478.5,
+        "profit_factor": 1.66,
+        "target_hits": 371,
+        "stop_hits": 878,
+        "force_exits": 367
+      }
+    },
+    {
+      "rank": 8,
+      "parameters": {
+        "pivot_left": 3,
+        "pivot_right": 8,
+        "timeframe_minutes": 5,
+        "target_points": 100,
+        "base_stop": 48.0,
+        "stop_mode": "both",
+        "accumulated_loss_mode": "fixed",
+        "reset_on_target": true,
+        "target_increase_on_hit": 40.0,
+        "max_accumulated_loss_cap": 200,
+        "force_exit_time": "16:55",
+        "dual_position": false
+      },
+      "performance": {
+        "score": 5657.27,
+        "total_pnl": 18681.5,
+        "total_trades": 1616,
+        "win_rate": 41.6,
+        "sharpe_ratio": 0.202,
+        "max_drawdown": 478.5,
+        "profit_factor": 1.66,
+        "target_hits": 371,
+        "stop_hits": 878,
+        "force_exits": 367
+      }
+    },
+    {
+      "rank": 9,
+      "parameters": {
+        "pivot_left": 3,
+        "pivot_right": 8,
+        "timeframe_minutes": 5,
+        "target_points": 75,
+        "base_stop": 36.0,
+        "stop_mode": "zone",
+        "accumulated_loss_mode": "none",
+        "reset_on_target": true,
+        "target_increase_on_hit": 30.0,
+        "max_accumulated_loss_cap": 150,
+        "force_exit_time": "16:55",
+        "dual_position": false
+      },
+      "performance": {
+        "score": 5643.47,
+        "total_pnl": 18644.3,
+        "total_trades": 1740,
+        "win_rate": 46.1,
+        "sharpe_ratio": 0.201,
+        "max_drawdown": 594.4,
+        "profit_factor": 1.64,
+        "target_hits": 544,
+        "stop_hits": 854,
+        "force_exits": 342
+      }
+    },
+    {
+      "rank": 10,
+      "parameters": {
+        "pivot_left": 3,
+        "pivot_right": 8,
+        "timeframe_minutes": 5,
+        "target_points": 75,
+        "base_stop": 36.0,
+        "stop_mode": "zone",
+        "accumulated_loss_mode": "fixed",
+        "reset_on_target": true,
+        "target_increase_on_hit": 30.0,
+        "max_accumulated_loss_cap": 150,
+        "force_exit_time": "16:55",
+        "dual_position": false
+      },
+      "performance": {
+        "score": 5643.47,
+        "total_pnl": 18644.3,
+        "total_trades": 1740,
+        "win_rate": 46.1,
+        "sharpe_ratio": 0.201,
+        "max_drawdown": 594.4,
+        "profit_factor": 1.64,
+        "target_hits": 544,
+        "stop_hits": 854,
+        "force_exits": 342
+      }
+    }
+  ]
+}
