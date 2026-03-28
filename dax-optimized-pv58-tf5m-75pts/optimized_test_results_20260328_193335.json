@@ -1,0 +1,111 @@
+{
+  "timestamp": "2026-03-28T19:33:35.534029",
+  "total_combinations_estimated": 1759968,
+  "test_results": [
+    {
+      "name": "Standard Setup",
+      "config": {
+        "pivot_left": 5,
+        "pivot_right": 8,
+        "timeframe_minutes": 5,
+        "target_points": 75.0,
+        "base_stop": 36.0,
+        "accumulated_loss_mode": "none",
+        "reset_on_target": true,
+        "target_increase_on_hit": 30.0,
+        "max_accumulated_loss_cap": 150.0,
+        "force_exit_time": "16:55",
+        "dual_position": false,
+        "stop_mode": "zone",
+        "bidirectional": false
+      },
+      "metrics": {
+        "total_trades": 1590,
+        "total_pnl": 4034.200000000019,
+        "win_rate": 41.82389937106918,
+        "avg_win": 58.407518796992484,
+        "avg_loss": -37.71050920910073,
+        "max_drawdown": 1250.3500000000058,
+        "profit_factor": 1.1159026397140797,
+        "sharpe_ratio": 0.7226631674488341,
+        "target_hits": 442,
+        "stop_hits": 811,
+        "force_exits": 337,
+        "profit_dd_ratio": 3.226456592154197
+      },
+      "trades_count": 1590,
+      "runtime_seconds": 0.7857389450073242,
+      "error": null
+    },
+    {
+      "name": "Bidirectional Setup",
+      "config": {
+        "pivot_left": 4,
+        "pivot_right": 9,
+        "timeframe_minutes": 10,
+        "target_points": 60.0,
+        "base_stop": 30.0,
+        "accumulated_loss_mode": "to_target",
+        "reset_on_target": true,
+        "target_increase_on_hit": 25.0,
+        "max_accumulated_loss_cap": 120.0,
+        "force_exit_time": "16:45",
+        "dual_position": false,
+        "stop_mode": "both",
+        "bidirectional": true
+      },
+      "metrics": {
+        "total_trades": 1294,
+        "total_pnl": 1847.700000000037,
+        "win_rate": 42.65842349304482,
+        "avg_win": 49.34076086956531,
+        "avg_loss": -34.355074424898525,
+        "max_drawdown": 1573.7499999999964,
+        "profit_factor": 1.0727773313796867,
+        "sharpe_ratio": 0.4960508355543427,
+        "target_hits": 401,
+        "stop_hits": 649,
+        "force_exits": 244,
+        "profit_dd_ratio": 1.1740746624305267
+      },
+      "trades_count": 1294,
+      "runtime_seconds": 0.6490399837493896,
+      "error": null
+    },
+    {
+      "name": "Conservative Setup",
+      "config": {
+        "pivot_left": 6,
+        "pivot_right": 10,
+        "timeframe_minutes": 15,
+        "target_points": 50.0,
+        "base_stop": 25.0,
+        "accumulated_loss_mode": "none",
+        "reset_on_target": true,
+        "target_increase_on_hit": 20.0,
+        "max_accumulated_loss_cap": 100.0,
+        "force_exit_time": "16:30",
+        "dual_position": false,
+        "stop_mode": "zone",
+        "bidirectional": false
+      },
+      "metrics": {
+        "total_trades": 723,
+        "total_pnl": -1050.2000000000335,
+        "win_rate": 50.76071922544951,
+        "avg_win": 43.3212534059945,
+        "avg_loss": -47.87881355932207,
+        "max_drawdown": 2056.8500000000167,
+        "profit_factor": 0.9380380079178227,
+        "sharpe_ratio": -0.40488986893332857,
+        "target_hits": 284,
+        "stop_hits": 236,
+        "force_exits": 203,
+        "profit_dd_ratio": -0.5105865765612587
+      },
+      "trades_count": 723,
+      "runtime_seconds": 0.6064188480377197,
+      "error": null
+    }
+  ]
+}
