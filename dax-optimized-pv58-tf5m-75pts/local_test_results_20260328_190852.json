@@ -1,0 +1,134 @@
+{
+  "timestamp": "2026-03-28T19:08:52.805629",
+  "single_test": {
+    "config": {
+      "pivot_left": 5,
+      "pivot_right": 8,
+      "timeframe_minutes": 5,
+      "target_points": 75.0,
+      "base_stop": 36.0,
+      "accumulated_loss_mode": "none",
+      "reset_on_target": true,
+      "target_increase_on_hit": 30.0,
+      "max_accumulated_loss_cap": 150.0,
+      "force_exit_time": "16:55",
+      "dual_position": false,
+      "stop_mode": "zone"
+    },
+    "metrics": {
+      "total_trades": 1590,
+      "total_pnl": 4034.200000000019,
+      "win_rate": 41.82389937106918,
+      "avg_win": 58.407518796992484,
+      "avg_loss": -37.71050920910073,
+      "max_drawdown": 1250.3500000000058,
+      "profit_factor": 1.1159026397140797,
+      "sharpe_ratio": 0.7226631674488341,
+      "target_hits": 442,
+      "stop_hits": 811,
+      "force_exits": 337,
+      "profit_dd_ratio": 3.226456592154197
+    },
+    "trades_count": 1590,
+    "runtime_seconds": 0.7632009983062744,
+    "error": null
+  },
+  "multiple_tests": [
+    {
+      "config": {
+        "pivot_left": 5,
+        "pivot_right": 8,
+        "timeframe_minutes": 5,
+        "target_points": 75.0,
+        "base_stop": 36.0,
+        "stop_mode": "zone",
+        "accumulated_loss_mode": "none",
+        "reset_on_target": true,
+        "target_increase_on_hit": 30.0,
+        "max_accumulated_loss_cap": 150.0,
+        "force_exit_time": "16:55",
+        "dual_position": false
+      },
+      "metrics": {
+        "total_trades": 1590,
+        "total_pnl": 4034.200000000019,
+        "win_rate": 41.82389937106918,
+        "avg_win": 58.407518796992484,
+        "avg_loss": -37.71050920910073,
+        "max_drawdown": 1250.3500000000058,
+        "profit_factor": 1.1159026397140797,
+        "sharpe_ratio": 0.7226631674488341,
+        "target_hits": 442,
+        "stop_hits": 811,
+        "force_exits": 337,
+        "profit_dd_ratio": 3.226456592154197
+      },
+      "trades_count": 1590,
+      "error": null
+    },
+    {
+      "config": {
+        "pivot_left": 4,
+        "pivot_right": 9,
+        "timeframe_minutes": 10,
+        "target_points": 60.0,
+        "base_stop": 30.0,
+        "stop_mode": "both",
+        "accumulated_loss_mode": "none",
+        "reset_on_target": true,
+        "target_increase_on_hit": 25.0,
+        "max_accumulated_loss_cap": 120.0,
+        "force_exit_time": "16:55",
+        "dual_position": false
+      },
+      "metrics": {
+        "total_trades": 1354,
+        "total_pnl": 950.600000000024,
+        "win_rate": 39.80797636632201,
+        "avg_win": 48.87263450834888,
+        "avg_loss": -31.232164821648244,
+        "max_drawdown": 1670.2499999999964,
+        "profit_factor": 1.0374373566217383,
+        "sharpe_ratio": 0.2624514584898623,
+        "target_hits": 391,
+        "stop_hits": 751,
+        "force_exits": 212,
+        "profit_dd_ratio": 0.569136356832825
+      },
+      "trades_count": 1354,
+      "error": null
+    },
+    {
+      "config": {
+        "pivot_left": 6,
+        "pivot_right": 10,
+        "timeframe_minutes": 15,
+        "target_points": 90.0,
+        "base_stop": 45.0,
+        "stop_mode": "distance",
+        "accumulated_loss_mode": "to_target",
+        "reset_on_target": true,
+        "target_increase_on_hit": 35.0,
+        "max_accumulated_loss_cap": 180.0,
+        "force_exit_time": "16:55",
+        "dual_position": false
+      },
+      "metrics": {
+        "total_trades": 678,
+        "total_pnl": 1876.1500000000015,
+        "win_rate": 45.28023598820059,
+        "avg_win": 62.27931596091205,
+        "avg_loss": -46.85760869565217,
+        "max_drawdown": 938.8999999999942,
+        "profit_factor": 1.1088026862140157,
+        "sharpe_ratio": 0.711890104400534,
+        "target_hits": 168,
+        "stop_hits": 250,
+        "force_exits": 260,
+        "profit_dd_ratio": 1.9982426243476548
+      },
+      "trades_count": 678,
+      "error": null
+    }
+  ]
+}
