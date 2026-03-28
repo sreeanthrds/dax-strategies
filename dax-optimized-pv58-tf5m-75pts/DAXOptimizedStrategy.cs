@@ -126,6 +126,7 @@ namespace cAlgo.Robots
 
         // Signal state
         private PendingSignal _pendingSignal;
+        private bool _entryConfirmedWaitingForOpen;
 
         // Position tracking
         private Dictionary<string, OpenPos> _openPositions = new Dictionary<string, OpenPos>();
@@ -199,6 +200,7 @@ namespace cAlgo.Robots
             _lastDate = DateTime.MinValue;
             _forceExitedToday = false;
             _tfHasData = false;
+            _entryConfirmedWaitingForOpen = false;
 
             // Initialize performance tracking
             _totalTrades = 0;
@@ -246,6 +248,7 @@ namespace cAlgo.Robots
                 _forceExitedToday = false;
                 _tfHasData = false;
                 _pendingSignal = null;
+                _entryConfirmedWaitingForOpen = false;
                 
                 // Print daily performance summary
                 if (_totalTrades > 0)
@@ -270,6 +273,7 @@ namespace cAlgo.Robots
                 ForceCloseAll(barClose, "FORCE_EXIT");
                 _forceExitedToday = true;
                 _pendingSignal = null;
+                _entryConfirmedWaitingForOpen = false;
                 return;
             }
 
@@ -305,11 +309,18 @@ namespace cAlgo.Robots
             _tfLows.Add(barLow);
             _tfClose = barClose;
 
+            // ── check for entry on NEXT bar open (Python logic) ─────
+            if (_entryConfirmedWaitingForOpen)
+            {
+                ExecuteEntryOnOpen(barOpen);
+                _entryConfirmedWaitingForOpen = false;
+            }
+
             // ── check exits on every 1-min bar ──────────────────────
             CheckExitsOnBar(barHigh, barLow, barClose);
 
-            // ── check entry for pending signal ──────────────────────
-            CheckEntryOnBar(barClose);
+            // ── check entry confirmation for pending signal ─────────
+            CheckEntryConfirmation(barClose);
         }
 
         // ═══════════════════════════════════════════════════════════════
@@ -459,7 +470,7 @@ namespace cAlgo.Robots
         // ENTRY (confirmed on 1-minute bar close)
         // ═══════════════════════════════════════════════════════════════
 
-        private void CheckEntryOnBar(double barClose)
+        private void CheckEntryConfirmation(double barClose)
         {
             if (_pendingSignal == null) return;
 
@@ -485,13 +496,31 @@ namespace cAlgo.Robots
 
             if (!confirmed) return;
 
+            // CRITICAL: Set flag to enter on NEXT bar's open (Python logic)
+            _entryConfirmedWaitingForOpen = true;
+            Print("[CONFIRMED] {0} signal confirmed at {1:F1} - will enter on next bar open",
+                side, barClose);
+        }
+
+        private void ExecuteEntryOnOpen(double barOpen)
+        {
+            if (_pendingSignal == null) return;
+
+            string side = _pendingSignal.Side;
+            if (!CanTakeSignal(side))
+            {
+                _pendingSignal = null;
+                return;
+            }
+
             // ── Calculate stop distance (including accumulated loss) ─
             double stopDist = BaseStop;
             if (AccumLossMode != "none")
                 stopDist = BaseStop + _accumulatedLoss;
 
             // ── Calculate target ─────────────────────────────────────
-            double entryPrice = barClose;
+            // CRITICAL: Use OPEN price for entry (Python logic)
+            double entryPrice = barOpen;
             double targetPrice = side == "BUY"
                 ? entryPrice + _currentTargetPoints
                 : entryPrice - _currentTargetPoints;
@@ -550,15 +579,16 @@ namespace cAlgo.Robots
                 OpenPos op = kvp.Value;
 
                 // ── target hit ──────────────────────────────────────
+                // CRITICAL: Use CLOSE price for exit (Python logic)
                 if (side == "BUY" && barHigh >= op.TargetPrice)
                 {
-                    CloseTrackedPosition(op, op.TargetPrice, "TARGET");
+                    CloseTrackedPosition(op, barClose, "TARGET");
                     sidesToClose.Add(side);
                     continue;
                 }
                 if (side == "SELL" && barLow <= op.TargetPrice)
                 {
-                    CloseTrackedPosition(op, op.TargetPrice, "TARGET");
+                    CloseTrackedPosition(op, barClose, "TARGET");
                     sidesToClose.Add(side);
                     continue;
                 }
