@@ -1,0 +1,76 @@
+{
+  "timestamp": "2026-03-28T19:19:24.470221",
+  "performance_results": [
+    {
+      "name": "Unidirectional",
+      "config": {
+        "pivot_left": 5,
+        "pivot_right": 8,
+        "timeframe_minutes": 5,
+        "target_points": 75.0,
+        "base_stop": 36.0,
+        "accumulated_loss_mode": "none",
+        "reset_on_target": true,
+        "target_increase_on_hit": 30.0,
+        "max_accumulated_loss_cap": 150.0,
+        "force_exit_time": "16:55",
+        "dual_position": false,
+        "stop_mode": "zone",
+        "bidirectional": false
+      },
+      "metrics": {
+        "total_trades": 1590,
+        "total_pnl": 4034.200000000019,
+        "win_rate": 41.82389937106918,
+        "avg_win": 58.407518796992484,
+        "avg_loss": -37.71050920910073,
+        "max_drawdown": 1250.3500000000058,
+        "profit_factor": 1.1159026397140797,
+        "sharpe_ratio": 0.7226631674488341,
+        "target_hits": 442,
+        "stop_hits": 811,
+        "force_exits": 337,
+        "profit_dd_ratio": 3.226456592154197
+      },
+      "trades_count": 1590,
+      "runtime_seconds": 0.7378900051116943,
+      "error": null
+    },
+    {
+      "name": "Bidirectional",
+      "config": {
+        "pivot_left": 5,
+        "pivot_right": 8,
+        "timeframe_minutes": 5,
+        "target_points": 75.0,
+        "base_stop": 36.0,
+        "accumulated_loss_mode": "none",
+        "reset_on_target": true,
+        "target_increase_on_hit": 30.0,
+        "max_accumulated_loss_cap": 150.0,
+        "force_exit_time": "16:55",
+        "dual_position": false,
+        "stop_mode": "zone",
+        "bidirectional": true
+      },
+      "metrics": {
+        "total_trades": 1624,
+        "total_pnl": 3953.8000000000175,
+        "win_rate": 41.502463054187196,
+        "avg_win": 58.225519287833826,
+        "avg_loss": -37.22594936708859,
+        "max_drawdown": 1363.8000000000065,
+        "profit_factor": 1.1120367694147388,
+        "sharpe_ratio": 0.6979592820567848,
+        "target_hits": 444,
+        "stop_hits": 837,
+        "force_exits": 343,
+        "profit_dd_ratio": 2.8991054406804504
+      },
+      "trades_count": 1624,
+      "runtime_seconds": 0.7349910736083984,
+      "error": null
+    }
+  ],
+  "total_combinations_estimated": 34594560
+}
